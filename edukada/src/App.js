@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+import logo from './assets/logo.jpeg'
+
+
 
 function App() {
   const [username, setUsername] = useState('');
@@ -18,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <img src={logo} alt='edukadalogo' style={{height:'235px'}}/>
       <h2 className="title">EduKada</h2>
       <form onSubmit={handleLogin} className="form">
         <div className="form-group">
@@ -54,7 +58,12 @@ function App() {
           <a href=''>Forgot Password</a>
         </div>
         
-        <button type="submit" className="submit-button">Login</button>
+        <button type="submit" className="submit-button">Sign In</button>
+        <div className="Register">
+        <p>Don't have an account?</p>
+        <a href=''>Register</a>
+        
+        </div>
       </form>
     </div>
 
