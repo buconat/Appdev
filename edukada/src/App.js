@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 import logo from './assets/logo.jpeg'
+import facebook from './assets/facebook.png'
+import google from './assets/google.png'
+import twitter from './assets/twitter.png'
 
 
 
@@ -21,8 +24,13 @@ function App() {
 
   return (
     <div className="App">
-      <img src={logo} alt='edukadalogo' style={{height:'235px'}}/>
+{/* logo */}
+<div className='logo-container'>
       <h2 className="title">EduKada</h2>
+      <img src={logo} alt='edukadalogo' style={{height:'355px'}}/>
+      
+</div>
+{/* form */}
       <form onSubmit={handleLogin} className="form">
         <div className="form-group">
           
@@ -32,7 +40,7 @@ function App() {
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="input-field"
+            className="Email"
           />
         </div>
         <div className="form-group">
@@ -43,7 +51,7 @@ function App() {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="input-field"
+            className="Password"
           />
         </div>
         <div className='RememberMe'>
@@ -55,15 +63,31 @@ function App() {
             />
             Remember me
           </label>
+          {/* forgot password */}
+
           <a href=''>Forgot Password</a>
+          
+          
         </div>
         
         <button type="submit" className="submit-button">Sign In</button>
-        <div className="Register">
+        <div className="NoAccount">
+
         <p>Don't have an account?</p>
-        <a href=''>Register</a>
+
+      
+        
         
         </div>
+        <button type="Register" className="Register">Register</button>
+
+        <div className='Logo'>
+        <img src={facebook} alt='facebook' style={{height:'36px',weight:'38px'}}/>
+        <img src={google} alt='google' style={{height:'36px',weight:'38px'}}/>
+        <img src={twitter} alt='twitter' style={{height:'36px',weight:'38px'}}/>
+
+        </div>
+
       </form>
     </div>
 
